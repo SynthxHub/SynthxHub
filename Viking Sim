@@ -1,0 +1,384 @@
+local Finity = loadstring(game:HttpGet("https://pastebin.com/raw/CXm13r24"))()
+local FinityWindow = Finity.new(true)
+FinityWindow.ChangeToggleKey(Enum.KeyCode.T)
+
+-- Tabs
+local MainCategory = FinityWindow:Category("Main Cheats")
+
+	local AFKSection = MainCategory:Sector("AFK Section")
+
+	local Others = MainCategory:Sector("Others")
+
+local AutoFarmCategory = FinityWindow:Category("Auto Farms")
+
+	local AutoFarm = AutoFarmCategory:Sector("OP Auto Farms")
+
+local ShopCategory = FinityWindow:Category("Shop")
+	
+	local AutoBuy = ShopCategory:Sector("Auto Buy")
+
+local SettingsCategory = FinityWindow:Category("Settings")
+
+	local GUIShit = SettingsCategory:Sector("Gui")
+	
+	local Player = SettingsCategory:Sector("Player")
+
+		GUIShit:Cheat("Button", "Destroy Gui", function()
+		game.CoreGui.FinityUI:Destroy()
+	end)
+		Player:Cheat("Button", "Reset Player", function()
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+	end)
+	
+local MiscellaneousCategory = FinityWindow:Category("Synthx Hub")
+
+	local Games = MiscellaneousCategory:Sector("Current Supported Games:")
+	
+		Games:Cheat("Label", "1: Fitness Simulator")
+		Games:Cheat("Label", "2: Mad City")
+		Games:Cheat("Label", "3: Viking Simulator")
+		Games:Cheat("Label", "4: Survive The Disasters 2")
+		
+		local Discord = MiscellaneousCategory:Sector("Discord:")
+		
+		Discord:Cheat("Label", "https://discord.gg/QnRX47A")
+		
+		Discord:Cheat("Button", "Copy Discord Link:", function()
+	setclipboard("https://discord.gg/QnRX47A")
+end)
+
+local CreditsCategory = FinityWindow:Category("Credits")
+
+	local SynthxCredits = CreditsCategory:Sector("Synthx Hub Team:")
+		
+		SynthxCredits:Cheat("Label", "aussie#0768")
+		SynthxCredits:Cheat("Label", "Novik#5516")
+		SynthxCredits:Cheat("Label", "brably#0001")
+
+local mt = getrawmetatable(game)
+    local oldNamecall = mt.__namecall
+    if setreadonly then setreadonly(mt, false) else make_writeable(mt, true) end
+    local namecallMethod = getnamecallmethod or get_namecall_method
+    local newClose = newcclosure or function(f) return f end
+
+    mt.__namecall = newClose(function(self, ...)
+        local method = namecallMethod()
+        local args = {...}
+
+        if method == "Kick" then
+        warn('Kick Attempt')
+        wait(math.huge)
+        end
+        return oldNamecall(self, unpack(args))
+    end)
+if setreadonly then setreadonly(mt, true) else make_writeable(mt, false) end
+
+print("Loaded Anti Kick")
+
+local uis = game:getService("UserInputService")
+	if uis:IsKeyDown(Enum.KeyCode.V) then
+	game.CoreGui.FinityUI.Enabled = false
+end
+_G.StartAFK = false	
+AFKSection:Cheat(
+	"Checkbox",
+	"Start Game AFK",
+	function(State)
+	_G.StartAFK = not _G.StartAFK
+	while wait() do
+	if _G.StartAFK then
+		local Target = game:GetService("ReplicatedStorage").Events.Sell;
+Target:FireServer();
+wait()
+local Target = game:GetService("ReplicatedStorage").Events.Lift;
+Target:FireServer();
+wait()
+local string_1 = "Weights";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+wait(0.3)
+local string_1 = "Bodies";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+wait(0.3)
+local string_1 = "Tiers";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+wait(0.3)
+local function killboss()
+for i = 1,2500 do
+local userdata_1 = game:GetService("Workspace").Boss.Model.Boss;
+    local Target = game:GetService("ReplicatedStorage").Events.Damage;
+    Target:FireServer(userdata_1);
+    end
+    end
+        if game.Workspace.Boss.Dead.Value ~= true then
+	for i, v in pairs(game:GetService("Workspace").Boss.Model.Boss:GetChildren()) do
+if v.Name == "Head" and v.ClassName == "Part" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+                end
+            end
+            killboss() 
+        end
+local string_1 = "Morphs";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+local string_1 = "Auras";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+	wait(20)
+		end
+	end
+end)
+
+_G.EndBossAFK = false
+AFKSection:Cheat(
+	"Checkbox",
+	"End Game AFK",
+	function(State)
+	_G.EndBossAFK = not _G.EndBossAFK
+	while wait() do
+	if _G.EndBossAFK then
+local function killboss()
+for i = 1,5000 do
+local userdata_1 = game:GetService("Workspace")["Mega Boss"].Model.Boss2;
+local Target = game:GetService("ReplicatedStorage").Events.Damage;
+    Target:FireServer(userdata_1);
+    end
+    end
+    while true do 
+        wait()
+        if game:GetService("Workspace")["Mega Boss"].Dead.Value ~= true then
+	for i, v in pairs(game:GetService("Workspace")["Mega Boss"].Model.Boss2:GetChildren()) do
+if v.Name == "Head" and v.ClassName == "Part" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+    wait(0.3)
+                end
+            end
+            killboss() 
+        end
+	end
+	local Target = game:GetService("ReplicatedStorage").Events.Sell;
+	Target:FireServer();
+wait(0.3)
+local Target = game:GetService("ReplicatedStorage").Events.Lift;
+	Target:FireServer();
+wait(0.3)
+local string_1 = "Tiers";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+wait(1)
+local string_1 = "Bodies";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+wait(1)
+local string_1 = "Weights";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+local string_1 = "Morphs";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+local string_1 = "Auras";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+wait(20)
+end
+end
+end)
+
+_G.AutoCoinss = false
+Others:Cheat(
+	"Checkbox",
+	"Auto Farm Coins",
+	function(State)
+	_G.AutoCoinss = not _G.AutoCoinss
+	while wait() do
+	if _G.AutoCoinss then
+for i,v in pairs(workspace.Powerups:GetDescendants()) do
+    if v.Name == "Main" then 
+        v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+	wait()
+		end
+		end
+	end
+	end
+end)
+
+Others:Cheat("Button", "TP To End Island", function()
+	 	for i, v in pairs(game:GetService("Workspace")["Mega Boss"].Arena:GetChildren()) do
+    if v.Name == "Notify" and v.ClassName == "Part" then 
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+		end
+	end
+end)
+
+_G.AutoLift = false
+AutoFarm:Cheat(
+	"Checkbox",
+	"Auto Lift",
+	function(State)
+	_G.AutoLift = not _G.AutoLift
+	while wait() do
+	if _G.AutoLift then
+	local Target = game:GetService("ReplicatedStorage").Events.Lift;
+	Target:FireServer();
+	wait(3)
+	end
+	end
+end)
+
+_G.AutoSell = false
+AutoFarm:Cheat(
+	"Checkbox",
+	"Auto Sell",
+	function(State)
+	_G.AutoSell = not _G.AutoSell
+	while wait() do
+	if _G.AutoSell then
+	local Target = game:GetService("ReplicatedStorage").Events.Sell;
+	Target:FireServer();
+	wait(10)
+	end
+	end
+end)
+
+_G.AutoFightSB = false
+AutoFarm:Cheat(
+	"Checkbox",
+	"Auto Fight Starter Boss",
+	function(State)
+	_G.AutoFightSB = not _G.AutoFightSB
+	while wait() do
+	if _G.AutoFightSB then
+local function killboss()
+for i = 1,2500 do
+local userdata_1 = game:GetService("Workspace").Boss.Model.Boss;
+    local Target = game:GetService("ReplicatedStorage").Events.Damage;
+    Target:FireServer(userdata_1);
+    end
+    end
+    while true do 
+        if game.Workspace.Boss.Dead.Value ~= true then
+	for i, v in pairs(game:GetService("Workspace").Boss.Model.Boss:GetChildren()) do
+if v.Name == "Head" and v.ClassName == "Part" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+    wait(0.3)
+                end
+            end
+            killboss() 
+        end
+		end
+    end
+	end
+end)
+
+_G.AutoFightEB = false
+AutoFarm:Cheat(
+	"Checkbox",
+	"Auto Fight End Game Boss Boss",
+	function(State)
+	_G.AutoFightEB = not _G.AutoFightEB
+	while wait() do
+	if _G.AutoFightEB then
+local function killboss()
+for i = 1,5000 do
+local userdata_1 = game:GetService("Workspace")["Mega Boss"].Model.Boss2;
+local Target = game:GetService("ReplicatedStorage").Events.Damage;
+    Target:FireServer(userdata_1);
+    end
+    end
+    while true do 
+        wait()
+        if game:GetService("Workspace")["Mega Boss"].Dead.Value ~= true then
+	for i, v in pairs(game:GetService("Workspace")["Mega Boss"].Model.Boss2:GetChildren()) do
+if v.Name == "Head" and v.ClassName == "Part" then 
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+    wait(0.3)
+                end
+            end
+            killboss() 
+        end
+	end
+    end
+	end
+end)
+
+_G.AutoBW = false
+AutoBuy:Cheat(
+	"Checkbox",
+	"Auto Buy Weights",
+	function(State)
+	_G.AutoBW = not _G.AutoBW
+	while wait() do
+	if _G.AutoBW then
+		local string_1 = "Weights";
+		local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+		Target:FireServer(string_1);
+	wait(3)
+		end
+	end
+end)
+
+_G.AutoBB = false
+AutoBuy:Cheat(
+	"Checkbox",
+	"Auto Buy Bodies",
+	function(State)
+	_G.AutoBB= not _G.AutoBB
+	while wait() do
+	if _G.AutoBB then
+		local string_1 = "Bodies";
+		local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+		Target:FireServer(string_1);
+	wait(3)
+		end
+	end
+end)
+
+_G.AutoBT = false
+AutoBuy:Cheat(
+	"Checkbox",
+	"Auto Buy Tiers",
+	function(State)
+	_G.AutoBT = not _G.AutoBT
+	while wait() do
+	if _G.AutoBT then
+	local string_1 = "Tiers";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+	wait(3)
+		end
+	end
+end)
+
+_G.AutoBM = false
+AutoBuy:Cheat(
+	"Checkbox",
+	"Auto Buy Morphs",
+	function(State)
+	_G.AutoBM = not _G.AutoBM
+	while wait() do
+	if _G.AutoBM then
+	local string_1 = "Morphs";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+	wait(3)
+		end
+	end
+end)
+
+_G.AutoBA = false
+AutoBuy:Cheat(
+	"Checkbox",
+	"Auto Buy Auras",
+	function(State)
+	_G.AutoBA = not _G.AutoBA
+	while wait() do
+	if _G.AutoBA then
+	local string_1 = "Auras";
+	local Target = game:GetService("ReplicatedStorage").Events["Buy All"];
+	Target:FireServer(string_1);
+	wait(3)
+		end
+	end
+end)
